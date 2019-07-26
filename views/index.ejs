@@ -2,5 +2,8 @@
 
 <h1>Test</h1>
 
+<% for(let p in data.results) { %>
+<li><%=data.results[p].company.display_name%></li>
+<% } %>
 
 <% include partials/footer %>

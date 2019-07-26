@@ -4,6 +4,9 @@ const app = express();
 const request = require("request");
 const bodyParser = require("body-parser");
 
+const apiKey = "0eea66e3fafdde4ed325b128b5760462";
+const apiID = "1fedc867";
+
 //Set static file folder, body-parser settings for url and json
 app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded());
@@ -18,7 +21,16 @@ var obj = {};
 
 //GET request to change header, display query parameters and values
 app.get("/", function(req, res) {
-  res.render("index");
+  request(`https://api.adzuna.com:443/v1/api/jobs/us/search/1?app_id=${apiID}&app_key=${apiKey}&results_per_page=20&sort_by=relevance`, function(err, response, body) {
+    if(!err && response.statusCode == 200) {
+      let data = JSON.parse(body);
+      res.render("index", {data: data});
+    }
+    else {
+      console.log(err);
+      res.send("Oops! Something has gone wrong. Please try again later.");
+    }
+  });
 });
 
 
