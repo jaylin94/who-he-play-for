@@ -21,10 +21,16 @@ var obj = {};
 
 //GET request to change header, display query parameters and values
 app.get("/", function(req, res) {
-  request(`https://www.balldontlie.io/api/v1/players?&per_page=100`, function(err, response, body) {
+    res.render("index");
+});
+
+app.get("/search", function(req, res) {
+  let playerName = req.query.playerName;
+  request(`https://www.balldontlie.io/api/v1/players?&per_page=100&search=${playerName}`, function(err, response, body) {
     if(!err && response.statusCode == 200) {
       let data = JSON.parse(body);
-      res.render("index", {data: data});
+      console.log(data);
+      res.render("search", {data: data});
     }
     else {
       console.log(err);

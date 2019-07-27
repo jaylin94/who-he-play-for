@@ -1,0 +1,7 @@
+<!-- list in progress -->
+<div class="justify-content-center text-center">
+  <h3><u>Name and Team: </u></h3>
+  <% for(let p in data.data) { %>
+  <h4 class="text-left"><%=data.data[p].first_name%> <%=data.data[p].last_name%> <%= data.data[p].team.full_name%></h4>
+  <% } %>
+</div>
