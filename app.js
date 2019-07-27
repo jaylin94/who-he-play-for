@@ -21,7 +21,7 @@ var obj = {};
 
 //GET request to change header, display query parameters and values
 app.get("/", function(req, res) {
-  request(`https://api.adzuna.com:443/v1/api/jobs/us/search/1?app_id=${apiID}&app_key=${apiKey}&results_per_page=20&sort_by=relevance`, function(err, response, body) {
+  request(`https://www.balldontlie.io/api/v1/players?&per_page=100`, function(err, response, body) {
     if(!err && response.statusCode == 200) {
       let data = JSON.parse(body);
       res.render("index", {data: data});

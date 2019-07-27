@@ -1,16 +1,37 @@
 <% include partials/header %>
 
-<div class="myNav py-3 px-2 my-2 mx-2">
-  <a href="/" class="px-2">Home</a>
-  <a href="/" class="px-2">Portland, OR</a>
-  <a href="/" class="px-2">Seattle, WA</a>
-  <a href="/" class="px-2">San Francisco, CA</a>
+<!-- container start -->
+<div class="container-fluid px-0">
+
+  <!-- navbar -->
+  <div class="myNav py-4 px-2 my-0 mx-0">
+    <a href="/" class="px-2 active">Home</a>
+    <a href="/" class="px-2">Warriors</a>
+    <a href="/" class="px-2">Lakers</a>
+    <a href="/" class="px-2">Clippers</a>
+  </div>
+
+  <!-- caption header -->
+  <div class="header text-center text-light">
+    <div class="row">
+      <h1 class="display-1 col-md-10">Who He Play For?</h1>
+    </div>
+    <div class="row">
+      <h3 class="display-4 col-md-10">Find out who he play for!</h3>
+    </div>
+  </div>
+
+  <!-- list in progress -->
+  <div class="justify-content-center text-center">
+    <h5>Display Roster</h5>
+    <ul>
+      <% for(let p in data.data) { %>
+      <li><%=data.data[p].first_name%> <%=data.data[p].last_name%></li>
+      <% } %>
+    </ul>
+  </div>
+
+  <!-- container end -->
 </div>
-
-<h1>Test</h1>
-
-<% for(let p in data.results) { %>
-<li><%=data.results[p].company.display_name%></li>
-<% } %>
 
 <% include partials/footer %>
