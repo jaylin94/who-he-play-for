@@ -42,9 +42,13 @@ app.get("/watch", function(req, res) {
   res.render("watch");
 })
 
-app.get("/about", function(req, res){
+app.get("/about", function(req, res) {
   res.render("about");
 })
+
+app.get("/images", function(req, res) {
+  res.render("images");
+});
 
 
 //Render 404 page if page is not found
