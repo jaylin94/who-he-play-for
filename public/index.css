@@ -19,10 +19,10 @@
   text-shadow: 3px 3px 5px black;
   font-weight: 700;
 }
-/*
+
 #headerTitle {
-  margin-top: 30vh;
-} */
+  margin-top: 40vh;
+}
 
 #searchBox {
   min-width: 50vw;
@@ -69,6 +69,8 @@
 #resultsList {
   padding: 2%;
   max-height: 40vh;
+  max-width: 45vw;
+  min-width: 300px;
   font-size: 2rem;
   background-color: rgba(50, 50, 50, 0.6);
   box-shadow: 15px 15px 0 coral;
