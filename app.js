@@ -29,7 +29,6 @@ app.get("/search", function(req, res) {
   request(`https://www.balldontlie.io/api/v1/players?&per_page=100&search=${playerName}`, function(err, response, body) {
     if(!err && response.statusCode == 200) {
       let data = JSON.parse(body);
-      console.log(data);
       res.render("search", {data: data});
     }
     else {
@@ -38,6 +37,14 @@ app.get("/search", function(req, res) {
     }
   });
 });
+
+app.get("/watch", function(req, res) {
+  res.render("watch");
+})
+
+app.get("/about", function(req, res){
+  res.render("about");
+})
 
 
 //Render 404 page if page is not found

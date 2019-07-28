@@ -1,20 +1,46 @@
-body {
-
-}
-
 .header {
   padding-top: 3%;
+  margin: auto;
 
   background-image: url("/imgs/2.png");
   background-size: cover;
   background-position: center center;
 
-  text-shadow: 1px 1px 5px black;
+  transition: 1s;
+
+  text-shadow: 3px 3px 5px black;
 
   min-width: 100vw;
   min-height: 100vh;
 }
 
+#headerTitle, #resultsTitle {
+  margin-top: 20vh;
+  text-shadow: 3px 3px 5px black;
+  font-weight: 700;
+}
+/*
+#headerTitle {
+  margin-top: 30vh;
+} */
+
+#searchBox {
+  min-width: 50vw;
+  min-height: 5vh;
+  border: none;
+  box-shadow: 1px 1px 5px black;
+}
+
+.carouselBtns {
+  margin-top:5vh;
+}
+
+.carouselBtns .btn-primary {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid grey;
+  margin-right: 1%;
+
+}
 
 .myNav {
   min-width: 100vw;
@@ -22,10 +48,52 @@ body {
   display: flex;
   background-color: coral;
   position: fixed;
+  z-index: 2;
 }
 
 .myNav > a {
   float: left;
   display: inline-flex;
   color: white;
+}
+
+#rosterText {
+  background: rgba(255, 255, 255, 0.3);
+  overflow: auto;
+}
+
+#results {
+  margin: auto;
+}
+
+#resultsList {
+  padding: 2%;
+  max-height: 40vh;
+  font-size: 2rem;
+  background-color: rgba(50, 50, 50, 0.6);
+  box-shadow: 15px 15px 0 coral;
+  border: 2px outset black;
+  overflow: auto;
+}
+
+.watchVideo, .video {
+  padding-top:3%;
+}
+
+.watchVideo iframe {
+  height: 100vh;
+  width: 100vw;
+}
+
+.video iframe {
+  height: 50vh;
+  width: 80vh;
+}
+
+#aboutText {
+  margin-top: 10%;
+  max-width: 50vw;
+  max-height: 30vh;
+  border: 1px solid black;
+  overflow: auto;
 }
