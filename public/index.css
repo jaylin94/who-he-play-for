@@ -44,6 +44,11 @@ body {
   box-shadow: 1px 1px 5px black;
 }
 
+#searchBtn {
+  background-color: coral;
+  color: white;
+}
+
 .carouselBtns {
   margin-top:5vh;
 }
