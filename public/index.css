@@ -1,3 +1,12 @@
+@keyframes navColorChange {
+  from {background-color: coral;}
+  to {background-color: black;}
+}
+
+body {
+  font-family: 'Noto Serif', serif;
+}
+
 .header {
   padding-top: 3%;
   margin: auto;
@@ -44,6 +53,20 @@
   border: 1px solid grey;
   margin-right: 1%;
 
+}
+
+.myNav a:hover {
+  animation-name: navColorChange;
+  animation-direction: alternate;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+}
+
+.navTabs {
+  margin: auto;
+  float: left;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .myNav {
