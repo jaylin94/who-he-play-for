@@ -55,11 +55,12 @@ body {
 
 }
 
-.myNav a:hover {
+.myNav a:hover, .imageBtns:hover {
   animation-name: navColorChange;
   animation-direction: alternate;
   animation-duration: 0.75s;
   animation-iteration-count: infinite;
+  border: 1px solid white;
 }
 
 .navTabs {
@@ -129,15 +130,28 @@ body {
 
 #imageRow1 {
   padding-top: 10%;
+  padding-bottom: 10%;
+  justify-content: center;
+}
+
+.img-thumbnail {
+  padding-top: 5%;
+  max-width: 30vw;
+  max-height: 30vh;
+}
+.imageRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.images {
+  padding-bottom: 5%;
 }
 
 .imageBtns {
-  position: absolute;
-  max-width: 10%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  background-color: coral;
+  color: white;
+  border: 1px outset white;
 }
 
 @media (max-width: 900px) {
