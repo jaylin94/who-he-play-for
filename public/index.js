@@ -6,17 +6,17 @@ const resultsList = document.getElementById("resultsList");
 const searchBtn = document.getElementById("searchBtn");
 
 carouselBtn1.addEventListener("click", function(event) {
-  header.style.backgroundImage = "url('/imgs/2.png')";
+  header.style.backgroundImage = "url('/imgs/2-min.png')";
   event.stopPropagation();
 });
 
 carouselBtn2.addEventListener("click", function(event) {
-  header.style.backgroundImage = "url('/imgs/chuck1.png')";
+  header.style.backgroundImage = "url('/imgs/chuck1-min.png')";
   event.stopPropagation();
 });
 
 carouselBtn3.addEventListener("click", function(event) {
-  header.style.backgroundImage = "url('/imgs/kenny_chuck.png')";
+  header.style.backgroundImage = "url('/imgs/kenny_chuck-min.png')";
   event.stopPropagation();
 });
 
